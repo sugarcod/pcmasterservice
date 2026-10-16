@@ -1,0 +1,18 @@
+# === Шифруем весь исходный код и контент ===
+**/*.js          filter=git-crypt diff=git-crypt
+**/*.jsx         filter=git-crypt diff=git-crypt
+**/*.ts          filter=git-crypt diff=git-crypt
+**/*.tsx         filter=git-crypt diff=git-crypt
+**/*.mdx         filter=git-crypt diff=git-crypt
+gatsby-config.*  filter=git-crypt diff=git-crypt
+gatsby-node.*    filter=git-crypt diff=git-crypt
+gatsby-ssr.*     filter=git-crypt diff=git-crypt
+gatsby-browser.* filter=git-crypt diff=git-crypt
+.env*            filter=git-crypt diff=git-crypt
+src/data/**      filter=git-crypt diff=git-crypt
+
+# === Шифруем только секреты в static ===
+static/.env*                filter=git-crypt diff=git-crypt
+static/**/*.secret          filter=git-crypt diff=git-crypt
+
+# Остальное в static (CNAME, robots.txt, картинки, шрифты) не шифруется: правила выше их не затрагивают
