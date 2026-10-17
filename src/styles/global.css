@@ -189,7 +189,7 @@ body {
 .prose p {
     font-size: 1.125rem;
     margin-bottom: 1.25rem;
-    color: #6b7280;
+    color: #4b5563;
 }
 
 .prose ul {
@@ -200,7 +200,7 @@ body {
 .prose li {
     font-size: 1.125rem;
     margin-bottom: 0.75rem;
-    color: #6b7280;
+    color: #4b5563;
     list-style-type: disc;
 }
 
