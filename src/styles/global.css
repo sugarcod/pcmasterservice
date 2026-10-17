@@ -157,63 +157,11 @@ body {
 }
 
 /* MDX animations for lively content */
-.prose {
-    animation: scaleIn 0.5s ease-out forwards;
-}
-
-.prose h1 {
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 0.1s forwards;
-}
-
-.prose h2 {
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 0.3s forwards;
-}
-
-.prose h3 {
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 0.5s forwards;
-}
-
-.prose p {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-out 0.7s forwards;
-}
-
-.prose ul {
-    opacity: 0;
-    animation: slideInLeft 0.5s ease-out 0.9s forwards;
-}
-
-.prose li {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-out 1.1s forwards;
-}
-
-.prose li:nth-child(2) {
-    animation-delay: 1.2s;
-}
-
-.prose li:nth-child(3) {
-    animation-delay: 1.3s;
-}
-
-.prose li:nth-child(4) {
-    animation-delay: 1.4s;
-}
-
-.prose li:nth-child(5) {
-    animation-delay: 1.5s;
-}
-
-.prose li:nth-child(6) {
-    animation-delay: 1.6s;
-}
+/* Анимации появления текста .prose удалены: текст был скрыт до 1.6 с и ухудшал LCP */
 
 /* Custom typography styles for MDX */
 .prose {
-    font-family: 'Rubik', sans-serif;
+    font-family: inherit;
     line-height: 1.7;
 }
 
@@ -282,4 +230,7 @@ body {
 .prose p {
     border-left: 4px solid #88BE45;
     padding-left: 1rem;
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
